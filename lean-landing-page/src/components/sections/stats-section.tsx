@@ -1,3 +1,5 @@
+'use client';
+
 import AnimatedCounter from "../ui/animated-counter";
 
 const StatsSection = () => {
@@ -46,8 +48,8 @@ const StatsSection = () => {
         
         <div className="mt-16 bg-primary-foreground/5 backdrop-blur-sm rounded-lg p-8 border border-primary-foreground/10">
           <blockquote className="text-xl italic mb-6">
-            "Before Lean AI, we could only work at the speed of our manpower. Adding Lean AI has allowed us to expedite patient access 
-            to care and reallocate staff to patient-facing tasks. The results have been transformative for our business."
+            &ldquo;Before Lean AI, we could only work at the speed of our manpower. Adding Lean AI has allowed us to expedite patient access 
+            to care and reallocate staff to patient-facing tasks. The results have been transformative for our business.&rdquo;
           </blockquote>
           <div className="flex items-center">
             <div className="w-12 h-12 bg-primary-foreground/20 rounded-full mr-4 flex items-center justify-center text-white font-bold">

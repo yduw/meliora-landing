@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 
 const TestimonialsSection = () => {
@@ -73,7 +75,7 @@ const TestimonialsSection = () => {
             >
               <div className="flex-1">
                 <blockquote className="text-lg italic mb-6">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
                 <div className="flex items-center mb-6">
                   {testimonial.avatar}

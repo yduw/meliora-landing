@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 
 interface AnimatedCounterProps {
@@ -21,14 +23,19 @@ const AnimatedCounter = ({ value, duration = 2000, className = '' }: AnimatedCou
 
   useEffect(() => {
     // Set up intersection observer to trigger animation when in view
-    observerRef.current = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && !hasAnimated) {
-        setHasAnimated(true);
-      }
-    }, { threshold: 0.1 });
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      observerRef.current = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+        }
+      }, { threshold: 0.1 });
 
-    if (countRef.current) {
-      observerRef.current.observe(countRef.current);
+      if (countRef.current) {
+        observerRef.current.observe(countRef.current);
+      }
+    } else {
+      // Fallback for environments without IntersectionObserver
+      setHasAnimated(true);
     }
 
     return () => {
@@ -39,7 +46,7 @@ const AnimatedCounter = ({ value, duration = 2000, className = '' }: AnimatedCou
   }, [hasAnimated]);
 
   useEffect(() => {
-    if (!hasAnimated) return;
+    if (!hasAnimated || typeof window === 'undefined') return;
 
     let startTimestamp: number;
     const startValue = 0;
