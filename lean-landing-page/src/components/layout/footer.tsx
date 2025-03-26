@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer id="about" className="bg-primary text-primary-foreground py-12">
+    <footer id="about" className="bg-gradient-to-r from-primary/90 to-indigo-400/90 text-white py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div className="contact">
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-6 border-t border-primary-foreground/20 text-center">
+        <div className="mt-12 pt-6 border-t border-white/20 text-center">
           <p>© {new Date().getFullYear()} Lean AI, Inc. All Rights Reserved.</p>
         </div>
       </div>
