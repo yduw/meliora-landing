@@ -1,46 +1,67 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-24 pb-10 px-6 md:px-12">
-      <div className="max-w-5xl mx-auto text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">
-            AI-powered DME workflows that <span className="bg-gradient-to-r from-primary to-indigo-400 text-transparent bg-clip-text">scale with you</span>
-          </h1>
-          <p className="text-xl mb-8 text-muted-foreground max-w-xl">
-            <span className="font-semibold">LeanVision™</span> is our proprietary vision language model trained on millions of DME documents – 
-            <span className="italic block mt-2 text-primary font-medium">Retrofit to any stack, transform your operations</span>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button variant="cta" size="lg" className="bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90">
-              Book a Demo
-            </Button>
-            <Button variant="outline" size="lg">
-              Learn More
-            </Button>
+    <section className="relative min-h-[75vh] flex items-center justify-center pt-32 pb-16 px-6 md:px-12 overflow-hidden">
+      {/* Background gradient blob */}
+      <div className="absolute top-1/3 right-10 w-[40vw] h-[40vw] bg-gradient-to-br from-primary/20 to-indigo-400/20 rounded-full blur-3xl -z-10 opacity-70"></div>
+      
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight leading-tight">
+              Making your needs <br />
+              <span className="bg-gradient-to-r from-primary to-indigo-400 text-transparent bg-clip-text">our priority.</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-10 text-muted-foreground max-w-xl mx-auto md:mx-0">
+              Providing cutting-edge AI solutions and equipment with a focus on customer service excellence
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <Button 
+                variant="cta" 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-400/90 py-6 px-8 text-lg rounded-full"
+              >
+                Learn More
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                onClick={() => window.location.href='/contracts'} 
+                className="py-6 px-8 text-lg rounded-full border-2"
+              >
+                Customer Portal
+              </Button>
+            </div>
           </div>
-        </div>
-        <div className="hidden md:block bg-gradient-to-br from-white/50 to-secondary/30 backdrop-blur-sm rounded-xl border border-white/20 p-8 shadow-lg">
-          <div className="aspect-square max-w-sm mx-auto bg-white/70 p-4 rounded-lg shadow-sm flex flex-col">
-            <div className="w-full h-24 bg-gradient-to-r from-secondary/30 to-primary/20 rounded-md mb-4"></div>
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-indigo-400 mr-3"></div>
-              <div>
-                <div className="w-32 h-3 bg-secondary/50 rounded-full"></div>
-                <div className="w-20 h-2 bg-secondary/30 mt-2 rounded-full"></div>
+          
+          <div className="hidden md:flex justify-center items-center">
+            {/* Patient image in a styled container */}
+            <div className="relative w-full max-w-md rounded-xl border border-white/20 shadow-2xl overflow-hidden group">
+              <div className="relative aspect-[4/3] bg-gradient-to-r from-primary/10 to-indigo-400/10">
+                {/* This is a placeholder for an actual image of patients/people */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-indigo-400/20 group-hover:opacity-0 transition-opacity duration-300">
+                  <div className="h-full w-full flex items-center justify-center">
+                    <div className="text-center p-4">
+                      <div className="mx-auto h-48 w-48 overflow-hidden rounded-full border-4 border-white/50 shadow-lg mb-4">
+                        {/* Placeholder for patient image */}
+                        <div className="h-full w-full bg-gray-200 flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <p className="text-white text-lg font-medium">These are the people that our mission is about</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute top-2 right-2 bg-primary/80 text-white text-xs px-2 py-1 rounded-full z-10">
+                  Our Patients
+                </div>
               </div>
-            </div>
-            <div className="flex-1 flex flex-col gap-2">
-              <div className="w-full h-3 bg-secondary/40 rounded-full"></div>
-              <div className="w-5/6 h-3 bg-secondary/40 rounded-full"></div>
-              <div className="w-4/6 h-3 bg-secondary/40 rounded-full"></div>
-            </div>
-            <div className="mt-4 flex justify-between">
-              <div className="w-20 h-8 bg-gradient-to-r from-primary to-indigo-400 rounded-md"></div>
-              <div className="w-20 h-8 bg-secondary/30 rounded-md"></div>
             </div>
           </div>
         </div>

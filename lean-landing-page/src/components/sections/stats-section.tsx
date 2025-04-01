@@ -29,7 +29,7 @@ const StatsSection = () => {
           Genuine Results From Our Customers
         </h2>
         <p className="text-xl text-center mb-12 text-white/90 max-w-3xl mx-auto">
-          DME providers using Lean AI have achieved remarkable improvements in their operations:
+          Clients using Helix Processing solutions have achieved remarkable improvements in their operations:
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -48,7 +48,7 @@ const StatsSection = () => {
         
         <div className="mt-16 bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
           <blockquote className="text-xl italic mb-6">
-            &ldquo;Before Lean AI, we could only work at the speed of our manpower. Adding Lean AI has allowed us to expedite patient access 
+            &ldquo;Before Helix Processing, we could only work at the speed of our manpower. Their AI solutions have allowed us to expedite patient access 
             to care and reallocate staff to patient-facing tasks. The results have been transformative for our business.&rdquo;
           </blockquote>
           <div className="flex items-center">

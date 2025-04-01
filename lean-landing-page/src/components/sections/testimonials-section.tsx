@@ -2,106 +2,124 @@
 
 import { Button } from '@/components/ui/button';
 
-const TestimonialsSection = () => {
-  const testimonials = [
+const WhyChooseUsSection = () => {
+  const reasons = [
     {
-      quote: "Lean AI's automation has completely transformed our workflow. We're now processing new patients in a fraction of the time it used to take, which has been a game-changer for our team.",
-      author: "Darius Reid",
-      position: "EVP of Sales, Total Medical Supply",
-      company: "Total Medical Supply",
-      companyDesc: "Provider of high-quality medical supplies to doctors and patients in 48 states.",
-      avatar: (
-        <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">
-          DR
-        </div>
-      ),
-      logo: (
-        <div className="h-10 w-32 rounded-md bg-primary/10 flex items-center justify-center">
-          <span className="text-sm font-semibold text-primary">TMS</span>
-        </div>
+      title: "Quality Products",
+      description: "We deliver superior quality equipment and AI solutions that meet the highest industry standards.",
+      icon: (
+        <svg className="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
       )
     },
     {
-      quote: "At my former company, we would manually take information off faxes, then type it in and use RPA to put it in the EMR system. Lean AI was that... times ten.",
-      author: "Rob Bovee",
-      position: "VP Operations, SleepMed",
-      company: "SleepMed",
-      companyDesc: "Leading provider of sleep disorder diagnostic and treatment services.",
-      avatar: (
-        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl">
-          RB
-        </div>
-      ),
-      logo: (
-        <div className="h-10 w-32 rounded-md bg-blue-50 flex items-center justify-center">
-          <span className="text-sm font-semibold text-blue-600">SleepMed</span>
-        </div>
+      title: "Customer-Focused",
+      description: "Our priority is understanding and fulfilling your unique business needs with personalized solutions.",
+      icon: (
+        <svg className="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
       )
     },
     {
-      quote: "This technology is a godsend. I will never go back. Over my dead body.",
-      author: "Mike Austin",
-      position: "President, Quality DME",
-      company: "Quality DME",
-      companyDesc: "Full-service DME provider specializing in respiratory and mobility equipment.",
-      avatar: (
-        <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-xl">
-          MA
-        </div>
-      ),
-      logo: (
-        <div className="h-10 w-32 rounded-md bg-green-50 flex items-center justify-center">
-          <span className="text-sm font-semibold text-green-600">Quality DME</span>
-        </div>
+      title: "24/7 Support",
+      description: "Our dedicated offshore support team is available around the clock to assist with any issues or inquiries.",
+      icon: (
+        <svg className="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "Innovative Technology",
+      description: "We continuously evolve our AI technology to provide cutting-edge solutions for modern business challenges.",
+      icon: (
+        <svg className="w-12 h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
       )
     }
   ];
 
   return (
-    <section id="customer-stories" className="py-20 px-6 md:px-12">
+    <section id="why-us" className="py-28 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Customer Stories
-        </h2>
-        <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
-          Learn how these healthcare businesses transformed their operations with Lean AI:
-        </p>
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold mb-5">
+            Why choose <span className="bg-gradient-to-r from-primary to-indigo-400 text-transparent bg-clip-text">Helix Processing</span>?
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+            We positively impact businesses.
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
-              className="bg-card rounded-xl shadow-sm p-8 border border-border flex flex-col"
-            >
-              <div className="flex-1">
-                <blockquote className="text-lg italic mb-6">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-                <div className="flex items-center mb-6">
-                  {testimonial.avatar}
-                  <div className="ml-4">
-                    <p className="font-semibold">{testimonial.author}</p>
-                    <p className="text-muted-foreground text-sm">{testimonial.position}</p>
+        <div className="mb-20">
+          <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto mb-10">
+            {/* Placeholder for patient/customer satisfaction image */}
+            <div className="w-full md:w-1/3 flex-shrink-0">
+              <div className="rounded-full overflow-hidden border-4 border-primary/20 shadow-lg mx-auto w-48 h-48">
+                <div className="w-full h-full bg-gradient-to-r from-gray-200 to-gray-100 flex items-center justify-center">
+                  {/* This would be replaced with a real image of happy patients/customers */}
+                  <div className="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 text-primary/50" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                    </svg>
+                    <div className="absolute bottom-0 right-0">
+                      <div className="bg-primary text-white rounded-full p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              
-              <div className="border-t border-border pt-6">
-                <div className="flex justify-between items-center mb-4">
-                  <h4 className="font-medium">{testimonial.company}</h4>
-                  {testimonial.logo}
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">{testimonial.companyDesc}</p>
-                <Button variant="outline" size="sm" className="w-full">
-                  Read Case Study
-                </Button>
+            </div>
+            <p className="text-lg text-center md:text-left leading-relaxed text-gray-700 md:w-2/3">
+              Our customers are our priority. We strive to provide the best quality of products and customer service for your business needs, while meeting and exceeding the industry standards of excellence. We foster an environment of trust for our clients, positively impacting their operations with our caring and compassionate service.
+            </p>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
+          {reasons.map((reason, index) => (
+            <div 
+              key={index} 
+              className="bg-gray-50 rounded-lg p-8 shadow-md flex items-start gap-6 hover:shadow-lg transition-shadow"
+            >
+              <div className="flex-shrink-0 bg-white rounded-full p-3 shadow-sm">
+                {reason.icon}
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-3">{reason.title}</h3>
+                <p className="text-gray-600">{reason.description}</p>
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-28 bg-gradient-to-r from-primary to-indigo-400 rounded-lg p-12 text-white text-center shadow-xl">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-3xl font-bold mb-6">Ready to experience the Helix Processing difference?</h3>
+            <p className="text-xl mb-8 text-white/90">
+              Discover how our solutions and equipment can transform your business operations.
+            </p>
+            <Button 
+              variant="cta" 
+              size="lg" 
+              className="bg-white text-primary hover:bg-white/90 py-6 px-10 text-lg rounded-full shadow-md group"
+            >
+              Contact Us
+              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default TestimonialsSection;
+export default WhyChooseUsSection;

@@ -89,7 +89,7 @@ const DocumentsSection = () => {
           <span className="bg-gradient-to-r from-primary to-indigo-400 text-transparent bg-clip-text">All-in-One</span> Intelligent Automation
         </h2>
         <p className="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
-          LeanVision™ can extract structured data from virtually any healthcare document
+          HelixVision™ can extract structured data from virtually any healthcare document
         </p>
         
         <div className="flex flex-wrap justify-center items-start gap-6">

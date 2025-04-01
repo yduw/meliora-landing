@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lean AI - Intelligent Automation for DME Workflows",
-  description: "Revolutionize your DME operations with our powerful Vision Language Models. Retrofit to any stack in days, not months.",
-  keywords: ["DME automation", "healthcare AI", "document processing", "workflow automation", "patient intake"],
+  title: "Helix Processing - AI-Powered Solutions & Equipment",
+  description: "Premier provider of AI-powered solutions and phototherapy equipment tailored to meet your specific needs with exceptional customer service.",
+  keywords: ["AI solutions", "phototherapy equipment", "customer support", "equipment leasing", "medical equipment"],
 };
 
 export default function RootLayout({
