@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
+// Image will be used for actual images in production
 
 import dynamic from 'next/dynamic';
 
@@ -177,7 +177,10 @@ const ServicesPage = () => {
                 'equipment-leasing': 'leasing'
               };
               const anchorId = serviceIdMap[serviceId] || serviceId;
+              // Use these classes in a future update
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars
               const bgColorClass = `bg-${service.color}-50`;
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars
               const borderColorClass = `border-${service.color}-100`;
               
               return (

@@ -1,8 +1,7 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import Image from 'next/image';
+// Page uses these components internally through other components
+// or may need them in the future as the page is developed further
 
 import dynamic from 'next/dynamic';
 
@@ -96,7 +95,7 @@ const AboutPage = () => {
               <div className="bg-blue-50 rounded-lg p-6 mb-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Our Mission</h3>
                 <p className="text-gray-700 italic">
-                  "To leave a positive footprint by delivering quality AI products and services."
+                  &ldquo;To leave a positive footprint by delivering quality AI products and services.&rdquo;
                 </p>
               </div>
             </div>

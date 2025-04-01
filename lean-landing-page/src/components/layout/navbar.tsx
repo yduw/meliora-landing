@@ -57,8 +57,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-10">
           <ul className="flex space-x-10">
             <li>
-              <Link href="/" className="font-medium text-gray-700 hover:text-blue-600 transition-colors">
-                Home
+              <Link href="/" prefetch={true} scroll={true} passHref className="font-medium text-gray-700 hover:text-blue-600 transition-colors">
+                <span onClick={() => window.location.href = '/'}>Home</span>
               </Link>
             </li>
             <li className="relative" ref={aboutRef}>
@@ -83,17 +83,17 @@ const Navbar = () => {
 
               {aboutDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-100 animate-fadeIn">
-                  <Link href="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Our Story
+                  <Link href="/about" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/about'}>Our Story</div>
                   </Link>
-                  <Link href="/about#mission" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Mission & Vision
+                  <Link href="/about#mission" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/about#mission'}>Mission & Vision</div>
                   </Link>
-                  <Link href="/about#values" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Core Values
+                  <Link href="/about#values" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/about#values'}>Core Values</div>
                   </Link>
-                  <Link href="/about#team" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Our Team
+                  <Link href="/about#team" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/about#team'}>Our Team</div>
                   </Link>
                 </div>
               )}
@@ -120,20 +120,20 @@ const Navbar = () => {
 
               {servicesDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-100 animate-fadeIn">
-                  <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    All Services
+                  <Link href="/services" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/services'}>All Services</div>
                   </Link>
-                  <Link href="/services#customer-support" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    AI Customer Support
+                  <Link href="/services#customer-support" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/services#customer-support'}>AI Customer Support</div>
                   </Link>
-                  <Link href="/services#phototherapy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Phototherapy Equipment
+                  <Link href="/services#phototherapy" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/services#phototherapy'}>Phototherapy Equipment</div>
                   </Link>
-                  <Link href="/services#solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    AI-Powered Solutions
+                  <Link href="/services#solutions" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/services#solutions'}>AI-Powered Solutions</div>
                   </Link>
-                  <Link href="/services#leasing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Equipment Leasing
+                  <Link href="/services#leasing" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/services#leasing'}>Equipment Leasing</div>
                   </Link>
                 </div>
               )}
@@ -160,24 +160,24 @@ const Navbar = () => {
 
               {resourcesDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-100 animate-fadeIn">
-                  <Link href="/resources" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    All Resources
+                  <Link href="/resources" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/resources'}>All Resources</div>
                   </Link>
-                  <Link href="/resources/phototherapy-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Phototherapy Guide
+                  <Link href="/resources/phototherapy-guide" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/resources/phototherapy-guide'}>Phototherapy Guide</div>
                   </Link>
-                  <Link href="/resources#faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    FAQ
+                  <Link href="/resources#faq" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/resources#faq'}>FAQ</div>
                   </Link>
-                  <Link href="/resources#guides" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Equipment Guides
+                  <Link href="/resources#guides" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/resources#guides'}>Equipment Guides</div>
                   </Link>
                 </div>
               )}
             </li>
             <li>
-              <Link href="/contact" className="font-medium text-gray-700 hover:text-blue-600 transition-colors">
-                Contact
+              <Link href="/contact" prefetch={true} scroll={true} passHref className="font-medium text-gray-700 hover:text-blue-600 transition-colors">
+                <span onClick={() => window.location.href = '/contact'}>Contact</span>
               </Link>
             </li>
           </ul>
@@ -209,8 +209,8 @@ const Navbar = () => {
         <div className="md:hidden bg-white w-full border-t border-gray-100 shadow-lg">
           <ul className="flex flex-col py-6 px-6">
             <li className="py-3 border-b border-gray-100">
-              <Link href="/" className="block font-medium text-gray-700 hover:text-primary transition-colors">
-                Home
+              <Link href="/" prefetch={true} scroll={true} passHref className="block font-medium text-gray-700 hover:text-primary transition-colors">
+                <span onClick={() => window.location.href = '/'}>Home</span>
               </Link>
             </li>
             <li className="py-3 border-b border-gray-100">
@@ -231,17 +231,17 @@ const Navbar = () => {
                 </button>
                 {mobileAboutOpen && (
                   <div className="mt-2 pl-4 border-l-2 border-gray-200 animate-fadeIn">
-                    <Link href="/about" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      Our Story
+                    <Link href="/about" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
+                      <span onClick={() => window.location.href = '/about'}>Our Story</span>
                     </Link>
-                    <Link href="/about#mission" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      Mission & Vision
+                    <Link href="/about#mission" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
+                      <span onClick={() => window.location.href = '/about#mission'}>Mission & Vision</span>
                     </Link>
-                    <Link href="/about#values" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      Core Values
+                    <Link href="/about#values" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
+                      <span onClick={() => window.location.href = '/about#values'}>Core Values</span>
                     </Link>
-                    <Link href="/about#team" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      Our Team
+                    <Link href="/about#team" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
+                      <span onClick={() => window.location.href = '/about#team'}>Our Team</span>
                     </Link>
                   </div>
                 )}
@@ -319,8 +319,8 @@ const Navbar = () => {
               </div>
             </li>
             <li className="py-3">
-              <Link href="/contact" className="block font-medium text-gray-700 hover:text-primary transition-colors">
-                Contact
+              <Link href="/contact" prefetch={true} scroll={true} passHref className="block font-medium text-gray-700 hover:text-primary transition-colors">
+                <span onClick={() => window.location.href = '/contact'}>Contact</span>
               </Link>
             </li>
           </ul>

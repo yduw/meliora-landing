@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
+// Image may be used in the future for actual images
 import dynamic from 'next/dynamic';
 
 const Navbar = dynamic(() => import('@/components/layout/navbar'), { ssr: true });

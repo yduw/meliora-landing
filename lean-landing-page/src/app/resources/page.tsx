@@ -247,7 +247,7 @@ const ResourcesPage = () => {
           <div className="space-y-6">
             <div className="bg-gray-50 rounded-lg p-6 shadow-sm">
               <h3 className="text-xl font-bold mb-3 text-gray-800">How do I get started with your services?</h3>
-              <p className="text-gray-600">Getting started is easy! Simply contact our team through the contact page, and we'll schedule a consultation to understand your needs and recommend the best solutions.</p>
+              <p className="text-gray-600">Getting started is easy! Simply contact our team through the contact page, and we&apos;ll schedule a consultation to understand your needs and recommend the best solutions.</p>
             </div>
             
             <div className="bg-gray-50 rounded-lg p-6 shadow-sm">

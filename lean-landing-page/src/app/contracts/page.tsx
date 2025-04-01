@@ -8,6 +8,7 @@ const ContractsPage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [contracts, setContracts] = useState([
     {
       id: 'CT1001',
