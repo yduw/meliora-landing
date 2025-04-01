@@ -170,7 +170,7 @@ const ServicesPage = () => {
               // Create ID for each service section
               const serviceId = service.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
               // Map the service titles to the navbar anchor IDs
-              const serviceIdMap = {
+              const serviceIdMap: Record<string, string> = {
                 'ai-customer-support': 'customer-support',
                 'phototherapy-equipment': 'phototherapy',
                 'ai-powered-solutions': 'solutions',

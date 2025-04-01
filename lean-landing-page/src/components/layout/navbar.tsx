@@ -10,9 +10,9 @@ const Navbar = () => {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
 
-  const aboutRef = useRef(null);
-  const servicesRef = useRef(null);
-  const resourcesRef = useRef(null);
+  const aboutRef = useRef<HTMLLIElement | null>(null);
+  const servicesRef = useRef<HTMLLIElement | null>(null);
+  const resourcesRef = useRef<HTMLLIElement | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -25,14 +25,14 @@ const Navbar = () => {
 
   // Close dropdowns when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (aboutRef.current && !aboutRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (aboutRef.current && !aboutRef.current.contains(event.target as Node)) {
         setAboutDropdownOpen(false);
       }
-      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
         setServicesDropdownOpen(false);
       }
-      if (resourcesRef.current && !resourcesRef.current.contains(event.target)) {
+      if (resourcesRef.current && !resourcesRef.current.contains(event.target as Node)) {
         setResourcesDropdownOpen(false);
       }
     };

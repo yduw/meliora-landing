@@ -8,6 +8,7 @@ const WorkflowSection = () => {
   const timelineRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
   
+  // Observe when timeline is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -30,17 +31,6 @@ const WorkflowSection = () => {
     };
   }, []);
   
-  // Auto-advance through steps when in view
-  useEffect(() => {
-    if (!isInView) return;
-    
-    const interval = setInterval(() => {
-      setActiveStep((prev) => (prev < steps.length - 1 ? prev + 1 : 0));
-    }, 3000);
-    
-    return () => clearInterval(interval);
-  }, [isInView, steps.length]);
-
   const steps = [
     {
       number: '1',
@@ -180,6 +170,17 @@ const WorkflowSection = () => {
       </div>
     </section>
   );
+  
+  // Auto-advance through steps when in view
+  useEffect(() => {
+    if (!isInView) return;
+    
+    const interval = setInterval(() => {
+      setActiveStep((prev) => (prev < steps.length - 1 ? prev + 1 : 0));
+    }, 3000);
+    
+    return () => clearInterval(interval);
+  }, [isInView, steps.length]);
 };
 
 export default WorkflowSection;
