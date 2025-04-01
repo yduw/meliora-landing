@@ -123,17 +123,17 @@ const Navbar = () => {
                   <Link href="/services" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     <div onClick={() => window.location.href = '/services'}>All Services</div>
                   </Link>
-                  <Link href="/services#customer-support" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    <div onClick={() => window.location.href = '/services#customer-support'}>AI Customer Support</div>
+                  <Link href="/services/ai-customer-support" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/services/ai-customer-support'}>AI Customer Support</div>
                   </Link>
-                  <Link href="/services#phototherapy" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    <div onClick={() => window.location.href = '/services#phototherapy'}>Phototherapy Equipment</div>
+                  <Link href="/services/phototherapy-equipment" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/services/phototherapy-equipment'}>Phototherapy Equipment</div>
                   </Link>
-                  <Link href="/services#solutions" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    <div onClick={() => window.location.href = '/services#solutions'}>AI-Powered Solutions</div>
+                  <Link href="/services/ai-powered-solutions" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/services/ai-powered-solutions'}>AI-Powered Solutions</div>
                   </Link>
-                  <Link href="/services#leasing" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    <div onClick={() => window.location.href = '/services#leasing'}>Equipment Leasing</div>
+                  <Link href="/services/equipment-leasing" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    <div onClick={() => window.location.href = '/services/equipment-leasing'}>Equipment Leasing</div>
                   </Link>
                 </div>
               )}
@@ -268,17 +268,17 @@ const Navbar = () => {
                     <Link href="/services" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
                       All Services
                     </Link>
-                    <Link href="/services#customer-support" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      AI Customer Support
+                    <Link href="/services/ai-customer-support" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
+                      <span onClick={() => window.location.href = '/services/ai-customer-support'}>AI Customer Support</span>
                     </Link>
-                    <Link href="/services#phototherapy" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      Phototherapy Equipment
+                    <Link href="/services/phototherapy-equipment" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
+                      <span onClick={() => window.location.href = '/services/phototherapy-equipment'}>Phototherapy Equipment</span>
                     </Link>
-                    <Link href="/services#solutions" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      AI-Powered Solutions
+                    <Link href="/services/ai-powered-solutions" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
+                      <span onClick={() => window.location.href = '/services/ai-powered-solutions'}>AI-Powered Solutions</span>
                     </Link>
-                    <Link href="/services#leasing" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      Equipment Leasing
+                    <Link href="/services/equipment-leasing" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
+                      <span onClick={() => window.location.href = '/services/equipment-leasing'}>Equipment Leasing</span>
                     </Link>
                   </div>
                 )}

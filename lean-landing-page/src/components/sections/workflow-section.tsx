@@ -18,13 +18,14 @@ const WorkflowSection = () => {
       { threshold: 0.3 }
     );
     
-    if (timelineRef.current) {
-      observer.observe(timelineRef.current);
+    const currentRef = timelineRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
     
     return () => {
-      if (timelineRef.current) {
-        observer.unobserve(timelineRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -38,7 +39,7 @@ const WorkflowSection = () => {
     }, 3000);
     
     return () => clearInterval(interval);
-  }, [isInView]);
+  }, [isInView, steps.length]);
 
   const steps = [
     {

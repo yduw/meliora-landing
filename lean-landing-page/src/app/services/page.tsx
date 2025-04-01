@@ -196,9 +196,10 @@ const ServicesPage = () => {
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <Link 
                     href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    prefetch={true} scroll={true} passHref
                     className={`inline-flex items-center text-${service.color}-500 font-medium hover:text-${service.color}-600 transition-colors group`}
                   >
-                    <span className="transform transition-all group-active:scale-95">Learn More</span>
+                    <span onClick={() => window.location.href = `/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="transform transition-all group-active:scale-95">Learn More</span>
                     <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
