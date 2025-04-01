@@ -6,11 +6,9 @@ import { useState, useRef, useEffect } from 'react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
 
-  const aboutRef = useRef<HTMLLIElement | null>(null);
   const servicesRef = useRef<HTMLLIElement | null>(null);
   const resourcesRef = useRef<HTMLLIElement | null>(null);
 
@@ -19,16 +17,12 @@ const Navbar = () => {
   };
 
   // Mobile dropdowns
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (aboutRef.current && !aboutRef.current.contains(event.target as Node)) {
-        setAboutDropdownOpen(false);
-      }
       if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
         setServicesDropdownOpen(false);
       }
@@ -61,48 +55,10 @@ const Navbar = () => {
                 <span onClick={() => window.location.href = '/'}>Home</span>
               </Link>
             </li>
-            <li className="relative" ref={aboutRef}>
-              <button
-                onClick={() => {
-                  setAboutDropdownOpen(!aboutDropdownOpen);
-                  setServicesDropdownOpen(false);
-                  setResourcesDropdownOpen(false);
-                }}
-                className="font-medium text-gray-700 hover:text-blue-600 transition-colors flex items-center"
-              >
-                About Us
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${aboutDropdownOpen ? 'rotate-180' : ''}`}
-                  viewBox="0 0 20 20" 
-                  fill="currentColor"
-                >
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </button>
-
-              {aboutDropdownOpen && (
-                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-100 animate-fadeIn">
-                  <Link href="/about" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    <div onClick={() => window.location.href = '/about'}>Our Story</div>
-                  </Link>
-                  <Link href="/about#mission" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    <div onClick={() => window.location.href = '/about#mission'}>Mission & Vision</div>
-                  </Link>
-                  <Link href="/about#values" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    <div onClick={() => window.location.href = '/about#values'}>Core Values</div>
-                  </Link>
-                  <Link href="/about#team" prefetch={true} scroll={true} passHref className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    <div onClick={() => window.location.href = '/about#team'}>Our Team</div>
-                  </Link>
-                </div>
-              )}
-            </li>
             <li className="relative" ref={servicesRef}>
               <button
                 onClick={() => {
                   setServicesDropdownOpen(!servicesDropdownOpen);
-                  setAboutDropdownOpen(false);
                   setResourcesDropdownOpen(false);
                 }}
                 className="font-medium text-gray-700 hover:text-blue-600 transition-colors flex items-center"
@@ -142,7 +98,6 @@ const Navbar = () => {
               <button
                 onClick={() => {
                   setResourcesDropdownOpen(!resourcesDropdownOpen);
-                  setAboutDropdownOpen(false);
                   setServicesDropdownOpen(false);
                 }}
                 className="font-medium text-gray-700 hover:text-blue-600 transition-colors flex items-center"
@@ -216,40 +171,6 @@ const Navbar = () => {
             <li className="py-3 border-b border-gray-100">
               <div>
                 <button 
-                  onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-                  className="flex items-center justify-between w-full font-medium text-gray-700"
-                >
-                  <span>About Us</span>
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    className={`ml-1 h-4 w-4 transition-transform duration-200 ${mobileAboutOpen ? 'rotate-180' : ''}`}
-                    viewBox="0 0 20 20" 
-                    fill="currentColor"
-                  >
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                {mobileAboutOpen && (
-                  <div className="mt-2 pl-4 border-l-2 border-gray-200 animate-fadeIn">
-                    <Link href="/about" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      <span onClick={() => window.location.href = '/about'}>Our Story</span>
-                    </Link>
-                    <Link href="/about#mission" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      <span onClick={() => window.location.href = '/about#mission'}>Mission & Vision</span>
-                    </Link>
-                    <Link href="/about#values" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      <span onClick={() => window.location.href = '/about#values'}>Core Values</span>
-                    </Link>
-                    <Link href="/about#team" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      <span onClick={() => window.location.href = '/about#team'}>Our Team</span>
-                    </Link>
-                  </div>
-                )}
-              </div>
-            </li>
-            <li className="py-3 border-b border-gray-100">
-              <div>
-                <button 
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                   className="flex items-center justify-between w-full font-medium text-gray-700"
                 >
@@ -265,9 +186,6 @@ const Navbar = () => {
                 </button>
                 {mobileServicesOpen && (
                   <div className="mt-2 pl-4 border-l-2 border-gray-200 animate-fadeIn">
-                    <Link href="/services" className="block py-2 text-sm text-gray-600 hover:text-blue-600">
-                      All Services
-                    </Link>
                     <Link href="/services/ai-customer-support" prefetch={true} scroll={true} passHref className="block py-2 text-sm text-gray-600 hover:text-blue-600">
                       <span onClick={() => window.location.href = '/services/ai-customer-support'}>AI Customer Support</span>
                     </Link>

@@ -36,14 +36,14 @@ const Footer = () => {
           
           <div className="flex flex-col">
             <h3 className="text-xl font-bold mb-6">Quick Links</h3>
-            <Link href="/about" className="mb-3 text-gray-300 hover:text-primary transition-colors">
-              About Us
-            </Link>
             <Link href="/services" className="mb-3 text-gray-300 hover:text-primary transition-colors">
               Services
             </Link>
             <Link href="/resources" className="mb-3 text-gray-300 hover:text-primary transition-colors">
               Resources
+            </Link>
+            <Link href="/contact" className="mb-3 text-gray-300 hover:text-primary transition-colors">
+              Contact
             </Link>
             <Link href="/contracts" className="mb-3 text-gray-300 hover:text-primary transition-colors">
               Customer Portal
